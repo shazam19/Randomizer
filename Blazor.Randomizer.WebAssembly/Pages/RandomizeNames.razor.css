@@ -1,0 +1,68 @@
+﻿.szAnimate{
+    animation: example 1s;
+}
+
+.szAnimate2 {
+    animation: example2 1s;
+}
+
+@keyframes example {
+    from {
+        background-color: #c8d6e5;
+    }
+    to {background-color: transparent;}
+}
+
+@keyframes example2 {
+    from {
+        background-color: #c8d6e5;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+
+.szBorderFlashName {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: .5s;
+    animation-name: border-flash;
+    /*animation-iteration-count: 2;*/
+    animation-timing-function: steps(1, start);
+}
+
+.szBorderFlashName2 {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: .5s;
+    animation-name: border-flash2;
+    /*animation-iteration-count: 2;*/
+    animation-timing-function: steps(1, start);
+}
+
+@keyframes border-flash {
+    from {
+        border: 1px solid #c8d6e5;
+        
+    }
+
+    to {
+        border: 1px solid #c8d6e5;
+        box-shadow: 0 0 5px #0abde3, 0 0 25px #0abde3, 0 0 50px #0abde3, 0 0 500px #0abde3;
+    }
+}
+
+@keyframes border-flash2 {
+    from {
+        border: 1px solid #c8d6e5;
+        
+    }
+
+    to {
+        border: 1px solid #c8d6e5;
+        box-shadow: 0 0 5px #0abde3, 0 0 25px #0abde3, 0 0 50px #0abde3, 0 0 500px #0abde3;
+    }
+}
+

@@ -1,0 +1,38 @@
+﻿
+.szBorderFlash {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: 1s;
+    animation-name: border-flash;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+.szBorderFlash2 {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: 1s;
+    animation-name: border-flash2;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+}
+
+@keyframes border-flash {
+    from {
+        border: 1px solid #c8d6e5;
+    }
+
+    to {
+        border: 3px solid #c8d6e5;
+    }
+}
+
+@keyframes border-flash2 {
+    from {
+        border: 1px solid #c8d6e5;
+    }
+
+    to {
+        border: 3px solid #c8d6e5;
+    }
+}
