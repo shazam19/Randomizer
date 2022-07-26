@@ -6,29 +6,21 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-6 col-md-9">
-            <EditForm Model=@emptyViewModel OnValidSubmit="AddNameSubmit">
-                <input @bind=nameToAdd @ref="nameInput" @onkeydown=OnNameToAddKeyDown/>
+            <EditForm Model=@_viewModel OnValidSubmit="AddNameSubmit">
+                <input @bind=nameToAdd @ref="nameInput" @onkeydown="OnNameToAddKeyDown" />
                 <button class="btn btn-primary" @onclick="AddName">Add name</button>
             </EditForm>
 
-            @if(names.Count > 1)
+            @if(_viewModel.Randomizees.Count > 1)
             {
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-                <div class="container">
+                <div class="container mt-5">
                     <div class="row">
                         <div class="col-xs-6 col-md-9">
                             <button class="btn btn-primary btn-lg" @onclick="PickRandomName">Give Me a Name</button>
                         </div>
                     </div>
 
-                    
-                    <br/>
-                    
-                    <div class="row">
+                    <div class="row mt-5">
                         <div class="col-xs-6 col-md-9">
                             <input @bind=randomName readonly="readonly" class="@nameClass input-group-text"/>
                         </div>
@@ -37,11 +29,11 @@
             }
         </div>
 
-        <div class="col-xs-6 col-md-3">
+        <div class="col-xs-6 col-md-3 mt-sm-5">
             <ul>
-            @foreach (var name in names)
+            @foreach (var randomizee in _viewModel.Randomizees)
             {
-                <li>@name</li>
+                <li>@randomizee.Name</li>
             }
             </ul>
         </div>

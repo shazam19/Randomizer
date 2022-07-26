@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
+using Client.Domain.Services;
 
 namespace Blazor.Randomizer.WebAssembly.Pages
 {
@@ -16,7 +17,8 @@ namespace Blazor.Randomizer.WebAssembly.Pages
 
         private Random random = new Random();
 
-        private EmptyViewModel emptyViewModel { get; set; } = new EmptyViewModel();
+        [Inject]
+        private IRandomizerNameViewModel _viewModel { get; set; } 
 
         private ElementReference nameInput;
 
@@ -27,12 +29,8 @@ namespace Blazor.Randomizer.WebAssembly.Pages
 
         private async Task AddName()
         {
-            if (string.IsNullOrEmpty(nameToAdd))
-            {
-                return;
-            }
+            _viewModel.AddName(nameToAdd);
 
-            names.Add(nameToAdd);
             nameToAdd = "";
 
             await nameInput.FocusAsync();
@@ -40,12 +38,16 @@ namespace Blazor.Randomizer.WebAssembly.Pages
 
         private void PickRandomName()
         {
+            var randomizee = _viewModel.GetRandomizee();
+
+            if(randomizee == null)
+            {
+                return;
+            }
+
             nameClass = nameClass == "szBorderFlashName" ? "szBorderFlashName2" : "szBorderFlashName";
 
-            var randomIndex = (int)random.NextInt64(0, names.Count);
-
-            randomName = names[randomIndex];
-
+            randomName = randomizee.Name;
         }
 
         private void OnNameToAddKeyDown(KeyboardEventArgs e)
@@ -58,9 +60,5 @@ namespace Blazor.Randomizer.WebAssembly.Pages
             Console.WriteLine($"key: {e.Key}; code: {e.Code}");
         }
 
-        public class EmptyViewModel
-        {
-
-        }
     }
 }

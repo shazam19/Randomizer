@@ -5,6 +5,16 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.Randomizer.WebAssembly", "Blazor.Randomizer.WebAssembly\Blazor.Randomizer.WebAssembly.csproj", "{C7A539C1-8C9F-4B81-A84B-5CAC5CAEF375}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Randomizer", "Randomizer", "{4159836D-73E8-4CCC-A7F4-8FFECF51744A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{149FA8A3-4271-454B-9452-F3D8EAEA302B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Randomizer.Domain", "Randomizer.Domain\Randomizer.Domain.csproj", "{EC87803C-2542-49B7-9239-2871C5D63268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Domain", "Client.Domain\Client.Domain.csproj", "{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Randomizer.Model", "Randomizer.Model\Randomizer.Model.csproj", "{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +25,27 @@ Global
 		{C7A539C1-8C9F-4B81-A84B-5CAC5CAEF375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7A539C1-8C9F-4B81-A84B-5CAC5CAEF375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7A539C1-8C9F-4B81-A84B-5CAC5CAEF375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC87803C-2542-49B7-9239-2871C5D63268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC87803C-2542-49B7-9239-2871C5D63268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC87803C-2542-49B7-9239-2871C5D63268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC87803C-2542-49B7-9239-2871C5D63268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C7A539C1-8C9F-4B81-A84B-5CAC5CAEF375} = {149FA8A3-4271-454B-9452-F3D8EAEA302B}
+		{EC87803C-2542-49B7-9239-2871C5D63268} = {4159836D-73E8-4CCC-A7F4-8FFECF51744A}
+		{93E62C71-64FB-4CE0-8AA4-5B7EB4480C48} = {149FA8A3-4271-454B-9452-F3D8EAEA302B}
+		{7F7BD6F7-7DB7-4DD5-9E93-36859B9779FC} = {4159836D-73E8-4CCC-A7F4-8FFECF51744A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68551474-BC59-4C7D-A49B-41998E517213}
