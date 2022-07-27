@@ -60,5 +60,9 @@ namespace Blazor.Randomizer.WebAssembly.Pages
             Console.WriteLine($"key: {e.Key}; code: {e.Code}");
         }
 
+        private void DeleteName(Guid id)
+        {
+            _viewModel.DeleteName(id);
+        }
     }
 }

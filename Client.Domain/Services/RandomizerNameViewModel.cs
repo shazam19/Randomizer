@@ -50,12 +50,25 @@ namespace Client.Domain.Services
 
             return Randomizees[randomIndex];
         }
+
+        public void DeleteName(Guid id)
+        {
+            var randomizee = Randomizees.FirstOrDefault(x => x.Id == id);
+
+            if(randomizee == null)
+            {
+                return;
+            }
+
+            Randomizees.Remove(randomizee);
+        }
     }
 
     public interface IRandomizerNameViewModel
     {
         public List<Randomizee> Randomizees { get; set; }
         void AddName(string nameToAdd);
-        Randomizee GetRandomizee();
+        Randomizee? GetRandomizee();
+        void DeleteName(Guid id);
     }
 }
