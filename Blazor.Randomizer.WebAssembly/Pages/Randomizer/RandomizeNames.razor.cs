@@ -13,10 +13,6 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
 
         private string randomName = "";
 
-        private List<string> names = new List<string>();
-
-        private Random random = new Random();
-
         [Inject]
         private IRandomizerNameViewModel _viewModel { get; set; } 
 
