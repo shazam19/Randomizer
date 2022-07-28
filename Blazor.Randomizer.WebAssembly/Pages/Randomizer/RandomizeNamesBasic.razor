@@ -1,4 +1,4 @@
-﻿@page "/names"
+﻿@page "/names-basic"
 
 <h3>RandomizeNames</h3>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="col-xs-6 col-md-6 mt-sm-5">
-            @*<div class="container nameList">
+            <div class="container nameList">
             @foreach (var randomizee in _viewModel.Randomizees)
             {
                 <div class="row">
@@ -44,14 +44,14 @@
                     </div>
                 </div>
             }
-            </div>*@
+            </div>
 
-            @foreach (var randomizee in _viewModel.Randomizees)
+            @*@foreach (var randomizee in _viewModel.Randomizees)
             {
                 <div>
                     <NameCard Name=@randomizee.Name Description="myDescription" ImageUrl="/invalid/path" />
                 </div>    
-            }
+            }*@
             
         </div>
     </div>

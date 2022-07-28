@@ -5,7 +5,7 @@ using Client.Domain.Services;
 
 namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
 {
-    public partial class RandomizeNames
+    public partial class RandomizeNamesBasic
     {
         private string nameToAdd = "";
 
