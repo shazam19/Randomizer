@@ -1,0 +1,32 @@
+﻿.card {
+    border: 1px solid #8395a7;
+    border-radius: 0;
+    background-color: #c8d6e5;
+    width: 400px;
+    height: 80px;
+    padding: 10px 25px;
+}
+
+    .card .header {
+        font-size: 20px;
+    }
+
+    .card .image {
+        border: 0px none transparent;
+        border-radius: 50%;
+        /*background-color: #576574;*/
+        height: 50px;
+        width: 50px;
+        margin-top: 5px;
+        text-align: center;
+        vertical-align: central;
+        padding: 0px;
+    }
+
+    .card .image img {
+        height: 50px;
+        width: 50px;
+        margin-left: -5px;
+        border-radius: 50%;
+        border: 1px solid #8395a7;
+    } 
