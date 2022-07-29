@@ -44,25 +44,23 @@
 
 @keyframes border-flash {
     from {
-        border: 1px solid #c8d6e5;
-        
+        border: 1px solid #ee5253;
     }
 
     to {
-        border: 1px solid #c8d6e5;
-        box-shadow: 0 0 5px #0abde3, 0 0 25px #0abde3, 0 0 50px #0abde3, 0 0 500px #0abde3;
+        border: 1px solid #ee5253;
+        box-shadow: 0 0 5px #ee5253, 0 0 25px #ee5253, 0 0 50px #ee5253, 0 0 500px #ee5253;
     }
 }
 
 @keyframes border-flash2 {
     from {
-        border: 1px solid #c8d6e5;
-        
+        border: 1px solid #ee5253;
     }
 
     to {
-        border: 1px solid #c8d6e5;
-        box-shadow: 0 0 5px #0abde3, 0 0 25px #0abde3, 0 0 50px #0abde3, 0 0 500px #0abde3;
+        border: 1px solid #ee5253;
+        box-shadow: 0 0 5px #ee5253, 0 0 25px #ee5253, 0 0 50px #ee5253, 0 0 500px #ee5253;
     }
 }
 
