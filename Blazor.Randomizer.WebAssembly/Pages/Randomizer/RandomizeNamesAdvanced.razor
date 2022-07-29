@@ -33,29 +33,13 @@
         </div>
 
         <div class="col-xs-6 col-md-6 mt-sm-5">
-            <div class="container nameList">
             @foreach (var randomizee in _viewModel.Randomizees)
             {
-                <div class="row">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-6">
-                        @randomizee.Name
-                    </div>
-                    <div class="col-md-1">
-                        <button class="btn btn-link" @onclick="@(x => DeleteName(randomizee.Id))">X</button>
-                    </div>
-                </div>
-            }
-            </div>
-
-            @*@foreach (var randomizee in _viewModel.Randomizees)
-            {
                 <div>
-                    <NameCard Name=@randomizee.Name Description="myDescription" ImageUrl="/invalid/path" />
+                    <NameCard Name=@randomizee.Name Description="myDescription" ImageUrl="@randomizee.ImageUrl" Id="@randomizee.Id" 
+                              OnDeleteButtonClick="@(x => DeleteName(randomizee.Id))"/>
                 </div>    
-            }*@
-            
+            }
         </div>
     </div>
 </div>

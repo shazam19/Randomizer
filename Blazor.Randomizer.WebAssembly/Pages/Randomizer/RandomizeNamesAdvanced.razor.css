@@ -1,4 +1,4 @@
-﻿.szAnimate{
+﻿.szAnimate {
     animation: example 1s;
 }
 
@@ -10,7 +10,10 @@
     from {
         background-color: #c8d6e5;
     }
-    to {background-color: transparent;}
+
+    to {
+        background-color: transparent;
+    }
 }
 
 @keyframes example2 {
@@ -45,7 +48,6 @@
 @keyframes border-flash {
     from {
         border: 1px solid #c8d6e5;
-        
     }
 
     to {
@@ -57,7 +59,6 @@
 @keyframes border-flash2 {
     from {
         border: 1px solid #c8d6e5;
-        
     }
 
     to {
@@ -66,9 +67,7 @@
     }
 }
 
-.nameList{
+.nameList {
     border-width: 0 0 0 1px;
     border-style: solid;
 }
-
-

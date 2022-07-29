@@ -9,13 +9,13 @@
 
   <ItemGroup>
     <None Remove="Pages\Randomizer\NameCard.razor.css" />
-    <None Remove="Pages\Randomizer\RandomizeNamesBasic - Copy.razor.css" />
+    <None Remove="Pages\Randomizer\RandomizeNamesAdvanced.razor.css" />
     <None Remove="Pages\Randomizer\RandomizeNamesBasic.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Pages\Randomizer\NameCard.razor.css" />
-    <Content Include="Pages\Randomizer\_RandomizeNamesAdvanced.css" />
+    <Content Include="Pages\Randomizer\RandomizeNamesAdvanced.razor.css" />
     <Content Include="Pages\Randomizer\RandomizeNamesBasic.razor.css" />
   </ItemGroup>
 
