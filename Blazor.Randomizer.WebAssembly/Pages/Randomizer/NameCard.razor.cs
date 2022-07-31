@@ -41,6 +41,11 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
             _animationClass = GetAnimationClass(AnimationType);
         }
 
+        private void RemoveAnimation()
+        {
+            _animationClass = string.Empty;
+        }
+
         private string GetAnimationClass(NameCardAnimationType animationType)
         {
             switch (animationType)
@@ -50,6 +55,9 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
 
                 case NameCardAnimationType.BorderFlash:
                     return _animationClass == AnimationClass.BorderFlash ? AnimationClass.BorderFlash2 : AnimationClass.BorderFlash;
+
+                case NameCardAnimationType.MoveUp:
+                    return _animationClass == AnimationClass.BounceUp ? AnimationClass.BounceUp2 : AnimationClass.BounceUp;
             }
 
             return string.Empty;
@@ -80,6 +88,10 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
         {
             public const string BorderFlash = "borderAnimation";
             public const string BorderFlash2 = "borderAnimation2";
+            public const string MoveUp = "moveUpAnimation";
+            public const string MoveUp2 = "moveUpAnimation2";
+            public const string BounceUp = "animate__animated animate__bounceInUp";
+            public const string BounceUp2 = "animate__animated animate__bounceInUp";
         }
 
     }

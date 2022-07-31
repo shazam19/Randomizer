@@ -2,7 +2,7 @@
 
 @if (!string.IsNullOrEmpty(Name))
 {
-    <div class="container mt-3 card @_animationClass">
+    <div class="container mt-3 card @_animationClass" @onanimationend="RemoveAnimation">
         <div class="row">
             <div class="col-md-1 image">
                 <img src=@ImageUrl alt="pp" />
