@@ -32,7 +32,7 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
             await nameInput.FocusAsync();
         }
 
-        protected void PickRandomName()
+        protected virtual void PickRandomName()
         {
             var randomizee = _viewModel.GetRandomizee();
 

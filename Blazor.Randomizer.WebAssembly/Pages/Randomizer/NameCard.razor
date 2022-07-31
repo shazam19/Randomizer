@@ -1,20 +1,26 @@
 ﻿@page "/namecard"
 
-<div class="container mt-3 card">
-    <div class="row">
-        <div class="col-md-1 image">
-            <img src=@ImageUrl alt="pp" />
-        </div>
-        <div class="col-md-9 col-lg-9">
-            <div class="header">
-                @Name
+@if (!string.IsNullOrEmpty(Name))
+{
+    <div class="container mt-3 card @_animationClass">
+        <div class="row">
+            <div class="col-md-1 image">
+                <img src=@ImageUrl alt="pp" />
             </div>
-            <div>
-                @Description
+            <div class="col-md-9 col-lg-9">
+                <div class="header">
+                    @Name
+                </div>
+                <div>
+                    @Description
+                </div>
             </div>
-        </div>
-        <div class="col-md-1">
-            <button class="btn btn-link" @onclick="OnDeleteClickInternal">x</button>
+            @if(!HideDelete)
+            {
+                <div class="col-md-1">
+                    <button class="btn btn-link" @onclick="OnDeleteClickInternal">x</button>
+                </div>
+            }
         </div>
     </div>
-</div>
+}

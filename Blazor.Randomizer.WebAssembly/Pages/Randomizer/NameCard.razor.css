@@ -34,3 +34,72 @@
 /*
     round image: https://www.webfx.com/blog/web-design/circular-images-css/
 */
+
+.backgroundAnimation {
+    animation: example 1s;
+}
+
+.backgroundAnimation2 {
+    animation: example2 1s;
+}
+
+@keyframes example {
+    from {
+        background-color: #c8d6e5;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes example2 {
+    from {
+        background-color: #c8d6e5;
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+
+.borderAnimation {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: .5s;
+    animation-name: border-flash;
+    /*animation-iteration-count: 2;*/
+    animation-timing-function: steps(1, start);
+}
+
+.borderAnimation2 {
+    /*height: 100px;
+    width: 100px;*/
+    animation-duration: .5s;
+    animation-name: border-flash2;
+    /*animation-iteration-count: 2;*/
+    animation-timing-function: steps(1, start);
+}
+
+@keyframes border-flash {
+    from {
+        border: 1px solid #c8d6e5;
+    }
+
+    to {
+        border: 1px solid #c8d6e5;
+        box-shadow: 0 0 5px #10ac84, 0 0 25px #10ac84, 0 0 50px #10ac84, 0 0 500px #10ac84;
+    }
+}
+
+@keyframes border-flash2 {
+    from {
+        border: 1px solid #c8d6e5;
+    }
+
+    to {
+        border: 1px solid #c8d6e5;
+        box-shadow: 0 0 5px #0abde3, 0 0 25px #0abde3, 0 0 50px #0abde3, 0 0 500px #0abde3;
+    }
+}
