@@ -1,6 +1,6 @@
 ﻿namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
 {
-    public partial class RandomizeNamesAdvanced
+    public partial class RandomizeNamesMedium : RandomizeNamesBase
     {
         private NameCard _nameCard;
 

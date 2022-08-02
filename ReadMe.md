@@ -14,6 +14,8 @@ Tech
 - Third-party animation library: https://animate.style/
 	- added to index.html
 	- needed hard refresh (ctrl+f5)
+	
+- Scoped css file
 
 - Use of custom event handler: 
 	- https://www.meziantou.net/removing-elements-after-an-animation-in-blazor.htm
