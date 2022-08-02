@@ -58,6 +58,9 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
 
                 case NameCardAnimationType.MoveUp:
                     return _animationClass == AnimationClass.BounceUp ? AnimationClass.BounceUp2 : AnimationClass.BounceUp;
+
+                case NameCardAnimationType.Flip:
+                    return AnimationClass.Flip;
             }
 
             return string.Empty;
@@ -92,6 +95,7 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
             public const string MoveUp2 = "moveUpAnimation2";
             public const string BounceUp = "animate__animated animate__bounceInUp";
             public const string BounceUp2 = "animate__animated animate__bounceInUp";
+            public const string Flip = "animate__animated animate__flip";
         }
 
     }
@@ -101,7 +105,8 @@ namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
         None,
         BorderFlash,
         MoveUp,
-        CenterAppear
+        CenterAppear,
+        Flip
     }
 
     
