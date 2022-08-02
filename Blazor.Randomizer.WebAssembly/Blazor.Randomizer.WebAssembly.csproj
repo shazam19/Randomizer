@@ -8,15 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Pages\Randomizer\NameCard.razor.css" />
-    <None Remove="Pages\Randomizer\RandomizeNamesMedium.razor.css" />
-    <None Remove="Pages\Randomizer\RandomizeNamesBasic.razor.css" />
+    <None Remove="Pages\Randomizer\Card\NameCard.razor.css" />
+    <None Remove="Pages\Randomizer\Medium\RandomizeNamesMedium.razor.css" />
+    <None Remove="Pages\Randomizer\Basic\RandomizeNamesBasic.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Pages\Randomizer\NameCard.razor.css" />
-    <Content Include="Pages\Randomizer\RandomizeNamesMedium.razor.css" />
-    <Content Include="Pages\Randomizer\RandomizeNamesBasic.razor.css" />
+    <Content Include="Pages\Randomizer\Card\NameCard.razor.css" />
+    <Content Include="Pages\Randomizer\Medium\RandomizeNamesMedium.razor.css" />
+    <Content Include="Pages\Randomizer\Basic\RandomizeNamesBasic.razor.css" />
   </ItemGroup>
 
   <ItemGroup>
