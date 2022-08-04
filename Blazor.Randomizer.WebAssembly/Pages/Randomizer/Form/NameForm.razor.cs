@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
-using Randomizer.Model.Model;
+using SzRandomizer.Model.Model;
+
 
 namespace Client.Pages.Randomizer.Form
 {

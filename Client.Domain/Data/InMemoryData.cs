@@ -1,4 +1,4 @@
-﻿using Randomizer.Model.Model;
+﻿using SzRandomizer.Model.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

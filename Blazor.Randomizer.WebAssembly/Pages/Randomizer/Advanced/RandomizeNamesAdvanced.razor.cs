@@ -1,6 +1,6 @@
 ﻿using Client.Domain.Services;
 using Microsoft.AspNetCore.Components;
-using Randomizer.Model.Model;
+using SzRandomizer.Model.Model;
 
 namespace Client.Pages.Randomizer.Advanced
 {

@@ -1,12 +1,20 @@
 ﻿@page "/name-form-test"
 
 @using Client.Pages.Randomizer.Form
+@using global::SzRandomizer.Model.Model
 
 <h3>NameFormTest</h3>
 
 <div class="row">
     <div class="col-md-3">
-        <NameForm />
+        <NameForm RandomizeeData="_randomizee" />
     </div>
 </div>
 
+@code{
+    private Randomizee _randomizee = new Randomizee
+        {
+            Name = "Abu Bakr Ibn Umar Ibn Khattab bin Ahmed",
+            Description = "asdf"
+        };
+}

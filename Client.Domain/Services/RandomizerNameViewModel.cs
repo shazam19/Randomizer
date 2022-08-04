@@ -1,5 +1,5 @@
 ﻿using Client.Domain.Data;
-using Randomizer.Model.Model;
+using SzRandomizer.Model.Model;
 
 namespace Client.Domain.Services
 {
