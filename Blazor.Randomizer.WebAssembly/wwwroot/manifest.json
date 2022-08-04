@@ -1,6 +1,6 @@
 {
-  "name": "Blazor.Randomizer.WebAssembly",
-  "short_name": "Blazor.Randomizer.WebAssembly",
+  "name": "Client",
+  "short_name": "Client",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

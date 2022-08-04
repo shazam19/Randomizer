@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 
-namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer.Card
+namespace Client.Pages.Randomizer.Card
 {
     public partial class NameCard
     {

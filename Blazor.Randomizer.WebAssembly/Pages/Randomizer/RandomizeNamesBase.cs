@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
 using Client.Domain.Services;
 
-namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer
+namespace Client.Pages.Randomizer
 {
     public class RandomizeNamesBase : ComponentBase
     {

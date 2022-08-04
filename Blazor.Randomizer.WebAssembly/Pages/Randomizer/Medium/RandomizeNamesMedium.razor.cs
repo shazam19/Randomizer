@@ -1,6 +1,6 @@
-﻿using Blazor.Randomizer.WebAssembly.Pages.Randomizer.Card;
+﻿using Client.Pages.Randomizer.Card;
 
-namespace Blazor.Randomizer.WebAssembly.Pages.Randomizer.Medium
+namespace Client.Pages.Randomizer.Medium
 {
     public partial class RandomizeNamesMedium : RandomizeNamesBase
     {

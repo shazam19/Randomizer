@@ -1,4 +1,4 @@
-﻿namespace Blazor.Randomizer.WebAssembly.Pages
+﻿namespace Client.Pages
 {
     public partial class CounterPartialClass
     {

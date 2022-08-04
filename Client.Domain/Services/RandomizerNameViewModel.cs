@@ -34,6 +34,11 @@ namespace Client.Domain.Services
             
         }
 
+        public void AddRandomize(Randomizee randomizee)
+        {
+            Randomizees.Add(randomizee);
+        }
+
         public Randomizee? GetRandomizee()
         {
             if(Randomizees == null || Randomizees.Count == 0)
@@ -65,5 +70,6 @@ namespace Client.Domain.Services
         void AddName(string nameToAdd);
         Randomizee? GetRandomizee();
         void DeleteName(Guid id);
+        void AddRandomize(Randomizee randomizee);
     }
 }
