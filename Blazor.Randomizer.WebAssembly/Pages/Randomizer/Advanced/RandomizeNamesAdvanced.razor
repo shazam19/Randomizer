@@ -5,20 +5,31 @@
 
 <PageTitle>Advanced I</PageTitle>
 
-<h3>RandomizeNamesAdvanced</h3>
+<h3>Randomize Names Advanced</h3>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <button class="btn btn-primary">Randomize</button>
+    <div class="row my-5">
+        <div class="col-md-9 text-center">
+            @if (_viewModel.Randomizees.Count > 1)
+            {
+                <button class="btn btn-primary btn-lg col-md-3">Randomize</button>
+            }
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
+    <div class="row mt-5">
+        @*<div class="col-md-2"></div>*@
+        <div class="col-md-3">
             <NameForm OnAddNameClick="AddName" RandomizeeData="_randomizee" />
         </div>
-        <div class="col-md-6">
-
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+            @foreach(var randomizee in _viewModel.Randomizees)
+            {
+                <NameCard Name="@randomizee.Name" 
+                          Description="@randomizee.Description" 
+                          ImageUrl="@randomizee.ImageUrl" 
+                          OnDeleteButtonClick="@(x => DeleteName(randomizee.Id))"/>
+            }
         </div>
     </div>
 </div>

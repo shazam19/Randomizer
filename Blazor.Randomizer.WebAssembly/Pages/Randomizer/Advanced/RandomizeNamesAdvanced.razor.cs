@@ -26,5 +26,10 @@ namespace Client.Pages.Randomizer.Advanced
 
             _viewModel.AddRandomize(_randomizee);
         }
+
+        private void DeleteName(Guid id)
+        {
+            _viewModel.DeleteName(id);
+        }
     }
 }
