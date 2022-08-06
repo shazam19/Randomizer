@@ -12,8 +12,16 @@
         <div class="col-md-9 text-center">
             @if (_viewModel.Randomizees.Count > 1)
             {
-                <button class="btn btn-primary btn-lg col-md-3">Randomize</button>
+                <button class="btn btn-primary btn-lg col-md-3" @onclick="PickRandomName">Randomize</button>
             }
+
+            <NameCard Name="@_selectedRandomizee?.Name"
+                      Description="@_selectedRandomizee?.Description"
+                      ImageUrl="@_selectedRandomizee?.ImageUrl"
+                      HideDelete="true"
+                      AnimationType="@NameCardAnimationType.BorderFlash"
+                      @ref="_randomNameCard"
+                      />
         </div>
     </div>
     <div class="row mt-5">
