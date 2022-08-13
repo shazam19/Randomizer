@@ -1,5 +1,6 @@
 ﻿using Client.Domain.Services;
 using Client.Pages.Randomizer.Card;
+using Client.Pages.Randomizer.Form;
 using Microsoft.AspNetCore.Components;
 using SzRandomizer.Model.Model;
 
@@ -18,6 +19,10 @@ namespace Client.Pages.Randomizer.Advanced
         private NameCard _randomNameCard;
 
         private NameForm _nameForm;
+
+        private bool _playSound;
+
+
         [Inject]
         private IRandomizerNameViewModel _viewModel { get; set; }
 
@@ -34,7 +39,9 @@ namespace Client.Pages.Randomizer.Advanced
 
             _randomizee = new Randomizee();
 
+
             await _nameForm.FocusAsync();
+
         }
 
         private void DeleteName(Guid id)
@@ -49,6 +56,18 @@ namespace Client.Pages.Randomizer.Advanced
             _selectedRandomizee = randomizee;
 
             _randomNameCard.RunAnimation();
+
+            PlaySound();
+        }
+
+        private void PlaySound()
+        {
+            _playSound = true;
+        }
+
+        private void OnAudioEnded()
+        {
+            _playSound = false;
         }
     }
 }
