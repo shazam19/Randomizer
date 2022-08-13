@@ -17,6 +17,7 @@ namespace Client.Pages.Randomizer.Advanced
 
         private NameCard _randomNameCard;
 
+        private NameForm _nameForm;
         [Inject]
         private IRandomizerNameViewModel _viewModel { get; set; }
 
@@ -32,6 +33,8 @@ namespace Client.Pages.Randomizer.Advanced
             _viewModel.AddRandomize(_randomizee);
 
             _randomizee = new Randomizee();
+
+            await _nameForm.FocusAsync();
         }
 
         private void DeleteName(Guid id)

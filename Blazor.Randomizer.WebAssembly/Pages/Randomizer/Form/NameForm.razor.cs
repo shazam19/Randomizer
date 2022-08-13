@@ -37,13 +37,14 @@ namespace Client.Pages.Randomizer.Form
         {
             if (string.IsNullOrEmpty(_randomizee.Name))
             {
+                await _nameInput.FocusAsync();
                 // show error
                 return;
             }
 
             await OnAddNameClick.InvokeAsync();
 
-            _randomizee = new Randomizee();
+            Console.WriteLine($"Inside AddName:focus");
 
             await _nameInput.FocusAsync();
         }
@@ -58,6 +59,12 @@ namespace Client.Pages.Randomizer.Form
             Console.WriteLine($"key: {e.Key}; code: {e.Code}");
         }
 
+        public async Task FocusAsync()
+        {
+            Console.WriteLine($"Inside focusAsync");
 
+            //StateHasChanged();
+            await _nameInput.FocusAsync();
+        }
     }
 }
