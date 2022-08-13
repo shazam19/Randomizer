@@ -23,11 +23,7 @@
                       @ref="_randomNameCard"
                       />
 
-                @if (_playSound)
-                {
-                    <audio src="/Resources/Audio/tada.mp4" autoplay @onended="OnAudioEnded"></audio>    
-                }
-                
+                <audio src="/Resources/Audio/tada.mp4" @ref="_audioElement"></audio>    
             }
 
         </div>

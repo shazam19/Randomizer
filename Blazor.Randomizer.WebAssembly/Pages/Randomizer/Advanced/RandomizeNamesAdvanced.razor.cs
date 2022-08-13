@@ -2,6 +2,7 @@
 using Client.Pages.Randomizer.Card;
 using Client.Pages.Randomizer.Form;
 using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 using SzRandomizer.Model.Model;
 
 namespace Client.Pages.Randomizer.Advanced
@@ -20,11 +21,13 @@ namespace Client.Pages.Randomizer.Advanced
 
         private NameForm _nameForm;
 
-        private bool _playSound;
-
+        private ElementReference _audioElement;
 
         [Inject]
         private IRandomizerNameViewModel _viewModel { get; set; }
+
+        [Inject]
+        private IJSRuntime JSRuntime { get; set; }
 
         private async Task AddName()
         {
@@ -49,7 +52,7 @@ namespace Client.Pages.Randomizer.Advanced
             _viewModel.DeleteName(id);
         }
 
-        private void PickRandomName()
+        private async Task PickRandomName()
         {
             var randomizee = _viewModel.GetRandomizee();
 
@@ -57,17 +60,12 @@ namespace Client.Pages.Randomizer.Advanced
 
             _randomNameCard.RunAnimation();
 
-            PlaySound();
+            await PlaySound();
         }
 
-        private void PlaySound()
+        private async Task PlaySound()
         {
-            _playSound = true;
-        }
-
-        private void OnAudioEnded()
-        {
-            _playSound = false;
+            await JSRuntime.InvokeVoidAsync("playMedia", _audioElement);
         }
     }
 }
