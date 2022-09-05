@@ -1,7 +1,7 @@
-﻿.side-by-side-button-left{
+﻿.right-border-square {
     border-radius: 5px 0px 0px 5px;
 }
 
-.side-by-side-button-right {
+.left-border-square {
     border-radius: 0px 5px 5px 0px;
 }
