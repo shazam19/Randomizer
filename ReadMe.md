@@ -1,10 +1,10 @@
-Randomizer
+## Randomizer
 
 Fun blazor app, to get a random name from a list
 
 
 
-Tech
+### Tech
 
 - Parent code base as code behind
 	- Overridden method for customized animation
