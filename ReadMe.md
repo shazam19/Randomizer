@@ -33,3 +33,6 @@ Tech
 	- Animation belongs the card itself, so if we need to change it's animation we won't have to modify any other file.
 
 - 
+
+--- identity service doc ---
+- https://medium.com/nerd-for-tech/authentication-and-authorization-in-net-core-web-api-using-jwt-token-and-swagger-ui-cc8d05aef03c
