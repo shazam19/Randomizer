@@ -25,7 +25,9 @@
     </div>
 </EditForm>
 
-<ImagePicker ImageUrls=@_avatarUrls></ImagePicker>
+<ImagePicker ImageUrls=@_avatarUrls
+             OnImageSelected="OnImageSelected"
+             @ref="_imagePicker"></ImagePicker>
 
 @*
     side by side button: https://stackoverflow.com/a/64896177/713847

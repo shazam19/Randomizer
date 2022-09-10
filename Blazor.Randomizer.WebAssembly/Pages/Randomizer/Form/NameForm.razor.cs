@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
 using Randomizer.Domain.Repository;
+using Sz.Fe.Core.Picker;
 using SzRandomizer.Model.Model;
 
 
@@ -28,6 +29,8 @@ namespace Client.Pages.Randomizer.Form
         private Randomizee _randomizee = new Randomizee();
 
         private ElementReference _nameInput;
+
+        private ImagePicker _imagePicker;
 
         [Inject]
         private IAvatarRepository _avatarRepository { get; set; }
@@ -71,6 +74,13 @@ namespace Client.Pages.Randomizer.Form
 
             //StateHasChanged();
             await _nameInput.FocusAsync();
+        }
+
+        private void OnImageSelected()
+        {
+            RandomizeeData.ImageUrl = _imagePicker.SelectedImageUrl;
+
+            Console.WriteLine(_imagePicker.SelectedImageUrl);
         }
     }
 }

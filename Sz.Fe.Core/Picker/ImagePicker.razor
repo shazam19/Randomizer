@@ -1,6 +1,6 @@
 ﻿<div>
     @foreach(var url in ImageUrls)
     {
-        <img src=@url alt="avatar" />
+        <img src=@url alt="avatar" @onclick="(x => OnImageUrlClick(url))"/>
     }
 </div>

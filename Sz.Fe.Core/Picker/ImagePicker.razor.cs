@@ -12,7 +12,16 @@ namespace Sz.Fe.Core.Picker
         [Parameter]
         public IList<string> ImageUrls { get; set; }
 
+        public string SelectedImageUrl { get; private set; }
+
         [Parameter]
-        public string ImageUrl { get; set; }
+        public EventCallback OnImageSelected { get; set; }
+
+        private async Task OnImageUrlClick(string imageUrl)
+        {
+            SelectedImageUrl = imageUrl;
+
+            await OnImageSelected.InvokeAsync();
+        }
     }
 }
