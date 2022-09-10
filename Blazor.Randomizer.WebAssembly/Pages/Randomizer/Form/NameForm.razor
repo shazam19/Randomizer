@@ -1,4 +1,5 @@
-﻿
+﻿@using Sz.Fe.Core.Picker
+
 <EditForm Model=@_randomizee>
     <div>
         <div class="mb-3">
@@ -24,6 +25,7 @@
     </div>
 </EditForm>
 
+<ImagePicker ImageUrls=@_avatarUrls></ImagePicker>
 
 @*
     side by side button: https://stackoverflow.com/a/64896177/713847

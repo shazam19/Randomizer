@@ -26,10 +26,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client.Domain\Client.Domain.csproj" />
+    <ProjectReference Include="..\Randomizer.Domain\Randomizer.Domain.csproj" />
+    <ProjectReference Include="..\Randomizer.Repository\Randomizer.Repository.csproj" />
+    <ProjectReference Include="..\Sz.Fe.Core\Sz.Fe.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Resources\Images\Avatars\" />
   </ItemGroup>
 
 </Project>

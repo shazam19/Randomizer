@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Components.Web;
+using Randomizer.Domain.Repository;
 using SzRandomizer.Model.Model;
 
 
@@ -27,6 +28,11 @@ namespace Client.Pages.Randomizer.Form
         private Randomizee _randomizee = new Randomizee();
 
         private ElementReference _nameInput;
+
+        [Inject]
+        private IAvatarRepository _avatarRepository { get; set; }
+
+        private IList<string> _avatarUrls => _avatarRepository.GetAllAvatarUrls();
 
         protected async Task AddNameSubmit(EditContext editContext)
         {
