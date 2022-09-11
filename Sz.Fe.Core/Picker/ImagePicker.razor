@@ -1,17 +1,19 @@
-﻿<div>
+﻿<div class="container">
+    <div class="row">
     @foreach(var image in _imageDatas)
     {
         @if(image.IsSelected)
         {
-            <div class="selected">
+            <div class="col-md-1 selected">
                 <img src=@image.ImageUrl alt="avatar" @onclick="(x => OnImageUrlClick(image))"/>
             </div>
         }
         else
         {
-            <div class="image">
+            <div class="col-md-1 image">
                 <img src=@image.ImageUrl alt="avatar" @onclick="(x => OnImageUrlClick(image))"/>
             </div>    
         }
     }
+    </div>
 </div>
