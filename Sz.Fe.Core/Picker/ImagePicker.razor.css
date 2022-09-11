@@ -3,3 +3,48 @@
     height: 50px;
     width: 50px;
 }
+
+.image {
+    border: 1px solid #8395a7;
+    border-radius: 50%;
+    background-color: #576574;
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: central;
+    padding: 0px;
+    overflow: hidden;
+}
+
+    .image img {
+        height: 50px;
+        width: 50px;
+        margin-left: 4px;
+        margin-top: 4px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+.selected {
+    border: 3px solid #10ac84;
+    border-radius: 50%;
+    background-color: transparent;
+    height: 60px;
+    width: 60px;
+    margin-top: 5px;
+    text-align: center;
+    vertical-align: central;
+    padding: 0px;
+    overflow: hidden;
+}
+
+    .selected img {
+        height: 45px;
+        width: 45px;
+        margin-left: 5px;
+        margin-top: 5px;
+        border-radius: 50%;
+        /*background-color: #ff0000;*/
+        overflow: hidden;
+    }
