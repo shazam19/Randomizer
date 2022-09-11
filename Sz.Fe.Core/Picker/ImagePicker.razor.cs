@@ -116,6 +116,11 @@ namespace Sz.Fe.Core.Picker
 
         public void ResetSelection()
         {
+            if(_selectedImageData == null)
+            {
+                return;
+            }
+
             _selectedImageData.IsSelected = false;
             //_selectedImageData = null;
         }
