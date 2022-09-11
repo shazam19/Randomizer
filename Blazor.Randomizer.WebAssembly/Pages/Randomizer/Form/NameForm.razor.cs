@@ -56,6 +56,8 @@ namespace Client.Pages.Randomizer.Form
             Console.WriteLine($"Inside AddName:focus");
 
             await _nameInput.FocusAsync();
+
+            _imagePicker.ResetSelection();
         }
 
         private void OnNameToAddKeyDown(KeyboardEventArgs e)

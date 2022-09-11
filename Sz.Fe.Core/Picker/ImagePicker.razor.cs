@@ -72,16 +72,26 @@ namespace Sz.Fe.Core.Picker
             Console.WriteLine("inside parameterSet");
         }
 
-        public string SelectedImageUrl { get; private set; }
+        public string SelectedImageUrl
+        {
+            get
+            {
+                return _selectedImageData.ImageUrl;
+            }
+        }
 
         [Parameter]
         public EventCallback OnImageSelected { get; set; }
 
         private IList<ImageData> _imageDatas;
 
+        private ImageData _selectedImageData;
+
         private async Task OnImageUrlClick(ImageData imageData)
         {
-            SelectedImageUrl = imageData.ImageUrl;
+            _selectedImageData = imageData;
+
+            //SelectedImageUrl = imageData.ImageUrl;
 
             foreach(var data in _imageDatas)
             {
@@ -102,6 +112,12 @@ namespace Sz.Fe.Core.Picker
             //    Console.WriteLine($"url: {data.ImageUrl} isSelected: {data.IsSelected}");
             //    //data.IsSelected = false;
             //}
+        }
+
+        public void ResetSelection()
+        {
+            _selectedImageData.IsSelected = false;
+            //_selectedImageData = null;
         }
     }
 
