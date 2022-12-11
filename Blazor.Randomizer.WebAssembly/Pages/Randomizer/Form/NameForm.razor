@@ -1,4 +1,5 @@
 ﻿@using Sz.Fe.Core.Picker
+@using Sz.Fe.Core.Button
 
 <EditForm Model=@_randomizee>
     <div>
@@ -14,8 +15,14 @@
 
         <div class="mb-3">
             <div class="row px-3">
-              <button class="btn btn-secondary col-md-6 right-border-square" type="button">Upload Image</button>
-              <button class="btn btn-secondary col-md-6 left-border-square" type="button" @onclick="ShowAvatars">Choose Avatar</button>
+              <button class="btn btn-secondary col-md-6 right-border-square image-button" type="button">Upload Image</button>
+              @*<button class="btn btn-secondary col-md-6 left-border-square" type="button" @onclick="ShowAvatars">Choose Avatar</button>*@
+
+              <ImageButton class="btn btn-secondary col-md-6 left-border-square image-button"
+                           ButtonText="Choose Avatar"
+                           ImageSource="@_randomizee.ImageUrl"
+                           OnButtonClick="ShowAvatars"
+                           />
             </div>
         </div>
 
