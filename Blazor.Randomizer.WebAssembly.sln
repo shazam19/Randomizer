@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Randomizer.Model", "Randomi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{5D4908C5-93A1-4970-8E56-B6C97353B34F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Randomizer.Repository", "Randomizer.Repository\Randomizer.Repository.csproj", "{F6D94490-850A-46F1-BC17-29705F2BB090}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Randomizer.Repository", "Randomizer.Repository\Randomizer.Repository.csproj", "{F6D94490-850A-46F1-BC17-29705F2BB090}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{B82714BC-A568-4F58-8027-CF13F3A5DE81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sz.Fe.Core", "Sz.Fe.Core\Sz.Fe.Core.csproj", "{AD624DD4-A230-416B-ADBC-65EFF80916B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sz.Fe.Core", "Sz.Fe.Core\Sz.Fe.Core.csproj", "{AD624DD4-A230-416B-ADBC-65EFF80916B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

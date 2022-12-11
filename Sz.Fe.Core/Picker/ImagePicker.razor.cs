@@ -85,7 +85,7 @@ namespace Sz.Fe.Core.Picker
 
         private IList<ImageData> _imageDatas;
 
-        private ImageData _selectedImageData;
+        private ImageData? _selectedImageData;
 
         private async Task OnImageUrlClick(ImageData imageData)
         {
