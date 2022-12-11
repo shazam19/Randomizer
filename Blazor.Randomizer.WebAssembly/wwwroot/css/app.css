@@ -62,3 +62,21 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+
+
+.btn-secondary {
+    background-color: #576574;
+}
+
+.btn-secondary:focus {
+    background-color: #576574;
+}
+
+.btn-secondary:hover {
+    background-color: #222f3e;
+}
+
+.btn-secondary:active {
+    background-color: #576574;
+}
+
