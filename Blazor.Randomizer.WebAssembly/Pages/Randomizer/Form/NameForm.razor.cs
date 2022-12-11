@@ -59,7 +59,7 @@ namespace Client.Pages.Randomizer.Form
 
             await _nameInput.FocusAsync();
 
-            _imagePicker.ResetSelection();
+            _imagePicker?.ResetSelection();
         }
 
         private void OnNameToAddKeyDown(KeyboardEventArgs e)
