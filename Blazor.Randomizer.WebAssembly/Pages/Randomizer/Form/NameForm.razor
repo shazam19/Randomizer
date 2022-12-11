@@ -15,7 +15,7 @@
         <div class="mb-3">
             <div class="row px-3">
               <button class="btn btn-secondary col-md-6 right-border-square" type="button">Upload Image</button>
-              <button class="btn btn-secondary col-md-6 left-border-square" type="button">Choose Avatar</button>
+              <button class="btn btn-secondary col-md-6 left-border-square" type="button" @onclick="ShowAvatars">Choose Avatar</button>
             </div>
         </div>
 
@@ -25,9 +25,25 @@
     </div>
 </EditForm>
 
-<ImagePicker ImageUrls=@_avatarUrls
-             OnImageSelected="OnImageSelected"
-             @ref="_imagePicker"></ImagePicker>
+@if (_showAvatars)
+{
+    <div class="popup-background">
+        <div class="popup-content">
+            <div class="container">
+                <div class="row">
+                    <ImagePicker ImageUrls=@_avatarUrls
+                             OnImageSelected="OnImageSelected"
+                             @ref="_imagePicker" />
+                </div>
+                <div class="row">
+                    <button class="btn btn-primary" @onclick="HideAvatars">Done</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
 
 @*
     side by side button: https://stackoverflow.com/a/64896177/713847

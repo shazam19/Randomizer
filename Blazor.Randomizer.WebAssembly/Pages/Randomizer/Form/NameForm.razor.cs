@@ -32,6 +32,8 @@ namespace Client.Pages.Randomizer.Form
 
         private ImagePicker _imagePicker;
 
+        private bool _showAvatars;
+
         [Inject]
         private IAvatarRepository _avatarRepository { get; set; }
 
@@ -83,6 +85,16 @@ namespace Client.Pages.Randomizer.Form
             RandomizeeData.ImageUrl = _imagePicker.SelectedImageUrl;
 
             Console.WriteLine(_imagePicker.SelectedImageUrl);
+        }
+
+        private void ShowAvatars()
+        {
+            _showAvatars = true;
+        }
+
+        private void HideAvatars(MouseEventArgs e)
+        {
+            _showAvatars = false;
         }
     }
 }
