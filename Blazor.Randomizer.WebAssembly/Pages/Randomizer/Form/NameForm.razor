@@ -34,18 +34,28 @@
 
 @if (_showAvatars)
 {
-    <div class="popup-background">
-        <div class="popup-content">
-            <div class="container">
+    <div class="modal fade show" style="display:block" aria-modal="true" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ImagePicker ImageUrls=@_avatarUrls
+                             OnImageSelected="OnImageSelected"
+                             @ref="_imagePicker" />
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" @onclick="HideAvatars">Done</button>
+                </div>
+            </div>
+            @*<div class="container">
                 <div class="row">
                     <ImagePicker ImageUrls=@_avatarUrls
                              OnImageSelected="OnImageSelected"
                              @ref="_imagePicker" />
                 </div>
                 <div class="row mt-3">
-                    <button class="btn btn-primary" @onclick="HideAvatars">Done</button>
+                    
                 </div>
-            </div>
+            </div>*@
         </div>
     </div>
 }
