@@ -1,0 +1,12 @@
+﻿button img{
+    margin-right: 5px;
+    margin-left: -5px;
+    margin-top: -2px;
+    width: 25px;
+    height: 25px;
+    vertical-align: central;
+}
+
+span{
+    margin-left: 10px;
+}

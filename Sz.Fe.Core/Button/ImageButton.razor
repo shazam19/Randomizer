@@ -1,0 +1,7 @@
+﻿<button @attributes=CapturedAttributes @onclick="ButtonClicked">
+    @if (!string.IsNullOrEmpty(ImageSource))
+    {
+        <img src="@ImageSource" />
+    }
+    <span>@ButtonText</span>
+</button>
