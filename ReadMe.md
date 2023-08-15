@@ -42,8 +42,17 @@ Fun blazor app, to get a random name from a list
 
 
 --- deployed to without domain & ci/cd: 
+- netlify
+	- publish site (manual)
+		- published 'client' to 'local folder'
+		- drag/drop or select wwwroot folder in [Deploys](https://app.netlify.com/sites/boisterous-fairy-8822fd/deploys)
 	- https://boisterous-fairy-8822fd.netlify.app/
 	- user: bl@y
 
+- github
+	- settings
+		- pages (doesn't work, just for static files? the artifact just contains the code)
+			- deploy from a branch (currently just shows the readme.md file)
+			- https://shazam19.github.io/Randomizer/ (currently just shows the readme.md file)
 
 
