@@ -22,6 +22,44 @@ namespace Client.Pages.Randomizer.Card
         [Parameter(CaptureUnmatchedValues = true)]
         public Dictionary<string, object>? CardAttributes { get; set; }
 
+        private string BackgroundColor => GetBackgroundColor(Name);
+
+        private string GetBackgroundColor(string name, bool isDarkTheme = false)
+        {
+            if (string.IsNullOrEmpty(Name))
+            {
+                return "#00000000";
+            }
+
+            int hash = name.GetHashCode();
+
+            if (isDarkTheme)
+            {
+                return GetDarkThemedColor(hash);
+            }
+
+            return GetLightThemedColor(hash);
+        }
+
+        private static string GetDarkThemedColor(int hash)
+        {
+            int r = (Math.Abs(hash) % 128);
+            int g = (Math.Abs(hash / 100) % 128);
+            int b = (Math.Abs(hash / 10000) % 128);
+
+            return $"#{r:X2}{g:X2}{b:X2}";
+        }
+
+        private static string GetLightThemedColor(int hash)
+        {
+            int r = (Math.Abs(hash) % 128) + 127; // Value between 127 and 255
+            int g = (Math.Abs(hash / 100) % 128) + 127; // Just to vary the colors a bit more
+            int b = (Math.Abs(hash / 10000) % 128) + 127; // Just to vary the colors a bit more
+
+            return $"#{r:X2}{g:X2}{b:X2}";
+        }
+
+
         [Parameter]
         public NameCardAnimationType AnimationType
         {
