@@ -46,6 +46,12 @@ Fun blazor app, to get a random name from a list
 	- publish site (manual)
 		- published 'client' to 'local folder'
 		- drag/drop or select wwwroot folder in [Deploys](https://app.netlify.com/sites/boisterous-fairy-8822fd/deploys)
+	- ci/cd git integration
+		- already has all .net tools installed
+		- build command: dotnet publish -c Release -o release
+		- Publish directory: release/wwwroot
+		- add netlify configuration file for proper routing
+		- https://swimburger.net/blog/dotnet/how-to-deploy-blazor-webassembly-to-netlify
 	- https://boisterous-fairy-8822fd.netlify.app/
 	- user: bl@y
 
