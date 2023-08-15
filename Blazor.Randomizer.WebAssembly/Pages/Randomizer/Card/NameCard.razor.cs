@@ -31,7 +31,7 @@ namespace Client.Pages.Randomizer.Card
                 return "#00000000";
             }
 
-            int hash = name.GetHashCode();
+            int hash = SimpleStringHash(name);
 
             if (isDarkTheme)
             {
@@ -57,6 +57,18 @@ namespace Client.Pages.Randomizer.Card
             int b = (Math.Abs(hash / 10000) % 128) + 127; // Just to vary the colors a bit more
 
             return $"#{r:X2}{g:X2}{b:X2}";
+        }
+
+        public static int SimpleStringHash(string str)
+        {
+            int hash = 0;
+
+            foreach (char c in str)
+            {
+                hash = (hash * 31) + c;
+            }
+
+            return hash;
         }
 
 
