@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/170e8338-7019-4c00-9226-9b7209854d35/deploy-status)](https://app.netlify.com/sites/boisterous-fairy-8822fd/deploys)
+
 ## Randomizer
 
 Fun blazor app, to get a random name from a list
@@ -36,3 +38,12 @@ Fun blazor app, to get a random name from a list
 
 --- identity service doc ---
 - https://medium.com/nerd-for-tech/authentication-and-authorization-in-net-core-web-api-using-jwt-token-and-swagger-ui-cc8d05aef03c
+
+
+
+--- deployed to without domain & ci/cd: 
+	- https://boisterous-fairy-8822fd.netlify.app/
+	- user: bl@y
+
+
+
