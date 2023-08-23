@@ -39,7 +39,7 @@ namespace Client.Pages.Randomizer.Form
 
         private IList<string> _avatarUrls => _avatarRepository.GetAllAvatarUrls();
 
-        protected async Task AddNameSubmit(EditContext editContext)
+        protected async Task AddNameSubmit(EditContext edit)
         {
             await AddName();
         }

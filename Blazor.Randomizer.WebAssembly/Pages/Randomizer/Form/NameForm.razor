@@ -1,7 +1,7 @@
 ﻿@using Sz.Fe.Core.Picker
 @using Sz.Fe.Core.Button
 
-<EditForm Model=@_randomizee>
+<EditForm Model=@_randomizee OnSubmit="AddNameSubmit">
     <div>
         <div class="mb-3">
             <label class="form-label">Name*:</label>
@@ -27,7 +27,7 @@
         </div>
 
         <div class="row px-3 mt-5">
-            <button class="btn btn-primary col-md-12" @onclick="AddName">Add Name</button>
+            <button class="btn btn-primary col-md-12" type="submit">Add Name</button>
         </div>
     </div>
 </EditForm>
